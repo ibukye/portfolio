@@ -14,6 +14,25 @@ const AboutPage = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">学歴</h2>
           <ul className="space-y-4">
+            {/* The International School@Park City */}
+            <li>
+              <strong className="block text-lg">The International School@Park City (2023年1月〜2024年8月)</strong>
+              <p className="text-gray-600 dark:text-gray-300 mt-1">
+                AS-levelカリキュラムにて、Math、Further Maths共に最高成績であるAを取得。
+                A-levelカリキュラムにて、Math、Further Maths共に最高成績であるA*を取得。
+                また、Year13時には全国の学生が参加するMath Competitionにおいて、学校内3名のみ獲得したGold Awardを受賞。
+                （また、Year13時には40人以上が参加するMath Competitionにおいて、上位3人のみに与えられるGold Awardを獲得しました。）
+              </p>
+            </li>
+            {/* Gap Year */}
+            <li>
+              <strong className="block text-lg">Gap Year (2024年8月〜2025年9月)</strong>
+              <p className="text-gray-600 dark:text-gray-300 mt-1">
+                University of Nottinghamに入学するためIELTSの勉強を始める
+                Overall 5.5 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0)を獲得
+              </p>
+            </li>
+            {/* University of Nottingham */}
             <li>
               <strong className="block text-lg">University of Nottingham (2025年9月〜現在)</strong>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
@@ -21,15 +40,6 @@ const AboutPage = () => {
                 人工知能やWeb開発に強い関心を持ち、授業に加えて自主制作プロジェクトにも積極的に取り組んでいます。
               </p>
             </li>
-            {/* ▼▼▼ ここから追加 ▼▼▼ */}
-            <li>
-              <strong className="block text-lg">マレーシアのインターナショナルスクール (2022年12月〜)</strong>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">
-                A-levelカリキュラムにて、Math、Further Maths共に最高成績であるA*を取得。
-                また、Year13時には40人以上が参加するMath Competitionにおいて、上位3人のみに与えられるGold Awardを獲得しました。
-              </p>
-            </li>
-            {/* ▲▲▲ ここまで追加 ▲▲▲ */}
           </ul>
         </section>
 
