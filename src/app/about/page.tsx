@@ -18,9 +18,9 @@ const AboutPage = () => {
             <li>
               <strong className="block text-lg">The International School@Park City (2023年1月〜2024年8月)</strong>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                AS-levelカリキュラム(Year12)にて、Math、Further Maths共に最高成績であるAを取得。
-                A-levelカリキュラム(Year13)にて、Math、Further Maths共に最高成績であるA*を取得。
-                また、Year13時には全国の学生が参加するMath Competitionにおいて、学校内3名のみ獲得したGold Awardを受賞。
+                AS-levelカリキュラム(Year12)にて、Math、Further Maths共に最高成績であるAを取得。<br />
+                A-levelカリキュラム(Year13)にて、Math、Further Maths共に最高成績であるA*を取得。<br />
+                また、Year13時には全国の学生が参加するMath Competitionにおいて、学校内3名のみ獲得したGold Awardを受賞。<br />
                 （また、Year13時には40人以上が参加するMath Competitionにおいて、上位3人のみに与えられるGold Awardを獲得しました。）
               </p>
             </li>
@@ -28,16 +28,16 @@ const AboutPage = () => {
             <li>
               <strong className="block text-lg">Gap Year (2024年8月〜2025年9月)</strong>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                University of Nottinghamに入学するためIELTSの勉強を始める
-                Overall 5.5 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0)を獲得
+                University of Nottinghamに入学するためIELTSの勉強を始める<br />
+                Overall 5.5 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0)を獲得<br />
               </p>
             </li>
             {/* University of Nottingham */}
             <li>
               <strong className="block text-lg">University of Nottingham (2025年9月〜現在)</strong>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Computer Science with Artificial Intelligence (Faculty of Science) 2年在学中。
-                人工知能やWeb開発に強い関心を持ち、授業に加えて自主制作プロジェクトにも積極的に取り組んでいます。
+                Computer Science with Artificial Intelligence (Faculty of Science) 2年在学中。<br />
+                人工知能やWeb開発に強い関心を持ち、授業に加えて自主制作プロジェクトにも積極的に取り組んでいます。<br />
               </p>
             </li>
           </ul>
