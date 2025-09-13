@@ -6,17 +6,6 @@ import Link from 'next/link';
 import { useEffect } from 'react'; // useEffectをインポート
 
 const ProjectsPage = () => {
-  // デバッグ用: ページが読み込まれた時に全プロジェクトのデータをコンソールに表示
-  /*
-  useEffect(() => {
-    console.log("--- 全プロジェクトデータ ---");
-    portfolioData.projects.forEach((p, index) => {
-      console.log(`[${index}] title: ${p.title}, image: "${p.image}"`);
-    });
-    console.log("--------------------------");
-  }, []);
-  */
-
   return (
     <section className="min-h-screen pt-20 pb-10 px-4">
       <div className="max-w-7xl mx-auto">
