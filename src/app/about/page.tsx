@@ -18,8 +18,8 @@ const AboutPage = () => {
             <li>
               <strong className="block text-lg">The International School@Park City (2023年1月〜2024年8月)</strong>
               <p className="text-gray-600 dark:text-gray-300 mt-1">
-                AS-levelカリキュラムにて、Math、Further Maths共に最高成績であるAを取得。
-                A-levelカリキュラムにて、Math、Further Maths共に最高成績であるA*を取得。
+                AS-levelカリキュラム(Year12)にて、Math、Further Maths共に最高成績であるAを取得。
+                A-levelカリキュラム(Year13)にて、Math、Further Maths共に最高成績であるA*を取得。
                 また、Year13時には全国の学生が参加するMath Competitionにおいて、学校内3名のみ獲得したGold Awardを受賞。
                 （また、Year13時には40人以上が参加するMath Competitionにおいて、上位3人のみに与えられるGold Awardを獲得しました。）
               </p>
