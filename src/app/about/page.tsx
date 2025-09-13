@@ -21,7 +21,6 @@ const AboutPage = () => {
                 AS-levelカリキュラム(Year12)にて、Math、Further Maths共に最高成績であるAを取得。<br />
                 A-levelカリキュラム(Year13)にて、Math、Further Maths共に最高成績であるA*を取得。<br />
                 また、Year13時には全国の学生が参加するMath Competitionにおいて、学校内3名のみ獲得したGold Awardを受賞。<br />
-                （また、Year13時には40人以上が参加するMath Competitionにおいて、上位3人のみに与えられるGold Awardを獲得しました。）
               </p>
             </li>
             {/* Gap Year */}
