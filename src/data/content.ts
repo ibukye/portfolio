@@ -58,7 +58,7 @@ const portfolioData = {
       title: "ポートフォリオサイト",
       description: "自分自身のスキルを紹介するレスポンシブなポートフォリオ。(作成途中)",
       image: "",
-      link: "https://example.com/project2",
+      link: "https://portfolio-beta-six-y04ws1488b.vercel.app/",
       category: "デザイン"
     },
   ],
