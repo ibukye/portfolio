@@ -41,6 +41,13 @@ const portfolioData = {
         category: "Web Development"
     },
     {
+        title: "Vocabulary Study App",
+        description: "自分だけのオリジナル単語帳を作成して、効率的に英単語を学習するためのWebアプリケーションです。フラッシュカード形式での学習や、苦手な単語の管理機能などを通じて、記憶の定着をサポートします。",
+        image: "/images/vocabulary-app.png",
+        link: "https://english-vocabulary-app-alpha.vercel.app/",
+        category: "Web Development"
+    },
+    {
       title: "Task Management App",
       description: "A Real-Time ToDo Application Built with React and Firebase (Link invalid)",
       image: "",
