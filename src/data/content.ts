@@ -43,7 +43,7 @@ const portfolioData = {
     {
         title: "Vocabulary Study App",
         description: "自分だけのオリジナル単語帳を作成して、効率的に英単語を学習するためのWebアプリケーションです。フラッシュカード形式での学習や、苦手な単語の管理機能などを通じて、記憶の定着をサポートします。",
-        image: "/images/vocabulary-app.png",
+        image: "/images/vocabulalry_app.png",
         link: "https://english-vocabulary-app-alpha.vercel.app/",
         category: "Web Development"
     },
