@@ -3,10 +3,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+// 型定義を修正: params は Promise です
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
 // このページは /projects/emotigift のようなURLでアクセスされます
-const ProjectDetail = ({ params }: { params: { id: string } }) => {
+const ProjectDetail = async ({ params }: Props) => {
+
+// params を await して id を取得
+  const { id } = await params;
+
+
   // URLのidと一致するプロジェクトを探す
-  const project = portfolioData.projects.find((p) => p.id === params.id);
+  const project = portfolioData.projects.find((p) => p.id === id);
 
   // 見つからない場合は404
   if (!project) {
