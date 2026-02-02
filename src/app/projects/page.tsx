@@ -1,9 +1,9 @@
-'use client'; // <-- この行をファイルの先頭に追加してください
+'use client';
 
 import portfolioData from "@/data/content";
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react'; // useEffectをインポート
+import { useEffect } from 'react';
 
 const ProjectsPage = () => {
   return (
@@ -12,6 +12,8 @@ const ProjectsPage = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">My Projects</h1>
         <div id="project-container" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioData.projects.map((project, index) => {
+
+            const projectLink = project.id ? `/projects/${project.id}` : project.link;
             
             // 画像パスが文字列であり、'/'で始まることを確認する、より安全なチェック
             const isValidImage = typeof project.image === 'string' && project.image.startsWith('/');
@@ -37,9 +39,16 @@ const ProjectsPage = () => {
                 )}
 
                 <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+                {/* 技術スタックのタグをカードにも少し見せる */}
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {project.techStack?.slice(0, 3).map(t => (
+                    <span key={t} className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{t}</span>
+                  ))}
+                </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-                <Link href={project.link} target="_blank" className="text-blue-500 hover:underline">
-                  See Detail
+
+                <Link href={projectLink} className="text-blue-500 hover:underline">
+                  See Detail →
                 </Link>
               </div>
             );
