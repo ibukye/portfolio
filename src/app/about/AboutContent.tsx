@@ -30,7 +30,7 @@ const translations = {
     education_gapyear_period: "2024年8月 〜 2025年9月",
     education_gapyear_desc: <>
       University of Nottingham入学に向けてIELTSの学習を開始<br />
-      IELTS Overall 5.5 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0)を獲得
+      IELTS Overall 6.0 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0)を獲得
     </>,
     
     education_uni_title: "University of Nottingham",
@@ -94,7 +94,7 @@ const translations = {
     education_gapyear_period: "Aug 2024 - Sep 2025",
     education_gapyear_desc: <>
       Started studying for IELTS to enter the University of Nottingham.<br />
-      Achieved IELTS Overall 5.5 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0).
+      Achieved IELTS Overall 6.0 (Listening: 6.5, Reading: 6.0, Writing: 5.5, Speaking: 5.0).
     </>,
     
     education_uni_title: "University of Nottingham",
