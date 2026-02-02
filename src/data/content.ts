@@ -9,8 +9,22 @@ const portfolioData = {
         title: "EmotiGift",
         description: "SNS投稿、会話履歴を分析して最適なギフトを提案するWebアプリ　技育CAMPハッカソン 2025年度 Vol.9 優秀賞受賞",
         image: "/images/emotigift.png",
-        link: "https://emotigift.vercel.app/",
+        link: "https://emotigift.vercel.app/",  // https://emoti-gift.vercel.app/
         category: "Web Development"
+    },
+    {
+        title: "Verde Via",
+        description: "",
+        image: "/images/",
+        link: "",
+        category: ""
+    },
+    {
+        title: "RepLink",
+        description: "",
+        image: "/images/",
+        link: "https://replink-484702.web.app/",
+        category: ""
     },
     {
         title: "Workout Tracker",
@@ -32,6 +46,13 @@ const portfolioData = {
         image: "/images/number_recognition_resnet2.png",
         link: "https://number-recognition-resnet.onrender.com/",
         category: "Machine Learning/Deep Learning"
+    },
+    {
+        title: "Next Anime",
+        description: "",
+        image: "/images/",
+        link: "https://next-anime-hazel.vercel.app/",
+        category: ""
     },
     {
         title: "Reverse1999 Team Builder v3",
