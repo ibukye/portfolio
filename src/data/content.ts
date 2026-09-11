@@ -204,6 +204,94 @@ What I Learned
       techStack: ["TypeScript"]
     },
     {
+      id: "imported-blackjack",
+      title: "Imported Blackjack",
+      description: "お笑いコンビ「きつね」の大津さんがさらば青春の光のYouTube番組内で考案したカードゲーム「輸入ブラックジャック」を、対戦できるWebゲームとして実装しました。",
+      description_en: "A web implementation of \"Imported Blackjack,\" a two-player bluffing card game devised by Otsu of the comedy duo Kitsune on Saraba Seishun no Hikari's YouTube channel.",
+      longDescription: `お笑いコンビ「きつね」の大津さんがYouTube番組「さらば青春の光」内で考案した二人対戦用カードゲームのルールを再現し、ReactとTypeScriptでWebゲーム化したものです。
+
+ルール概要
+各プレイヤーは1〜10の数字カード（各2枚ずつ）の山から中身を見ずに4枚引き、合計が21を超えないように手札を作ります。その後お互いに相手の手札を1枚ずつ公開し合い、その情報をもとに「そのまま勝負する（Check）」か「手札を1枚交換する（Trade）」かを選択。最終的に21に近い方が勝利、超えていれば失格となる心理戦ゲームです。
+
+実装のポイント
+・ゲーム進行をフェーズ（not started → initial card selection → turn order decided → reveal card → check or trade → trade → finished）としてStateで管理し、複雑な手番処理を見通しよく保つ設計にした。
+・手札交換の際に「そのカードが公開済みだったか」を正しく引き継ぐロジック（revealIndexの付け替え）が最も苦労した部分。`,
+      longDescription_en: `A two-player web card game that faithfully reproduces the rules of "Imported Blackjack," a game devised by Otsu of the comedy duo Kitsune, as introduced on the YouTube channel of Saraba Seishun no Hikari.
+
+Rules
+Each player secretly draws four cards (numbered 1-10, two of each) from a shared pile without exceeding a total of 21. Players then reveal exactly one of the opponent's cards to each other, and based on that partial information, choose to either "Check" (lock in their hand) or "Trade" one card with the opponent. Whoever ends closer to 21 without going over wins — a game built entirely on bluffing and inference.
+
+Implementation notes
+- Game progression is modeled as an explicit phase state machine (not started → initial card selection → turn order decided → reveal card → check or trade → trade → finished) to keep the turn logic manageable.
+- The trickiest part was correctly carrying over "which cards have been revealed" when a trade happens, so revealed information stays accurate after cards swap hands.`,
+      image: "",
+      link: "",
+      github: "",
+      noteUrl: "",
+      category: "Game Dev",
+      techStack: ["React", "TypeScript", "Vite"]
+    },
+    {
+      id: "otocatch",
+      title: "OtoCatch",
+      description: "マイクから取得した音をリアルタイムで解析し、自己相関法（オートコリレーション）を用いて音の高さ（音名）を検出・表示するWebアプリです。",
+      description_en: "A web app that analyzes microphone audio in real time and detects musical pitch using an autocorrelation algorithm.",
+      longDescription: `Web Audio APIでマイクからの音声を取得し、自己相関法（Autocorrelation）で基本周波数を推定、MIDIノート番号に変換して音名（ド・レ・ミ…）をリアルタイムに表示するアプリです。
+
+実装のポイント
+・振幅が一定の閾値を下回る場合は「無音」と判定し、誤検出を防止。
+・直近数フレーム分の検出結果から最頻値を取ることで、単発のノイズによる音名のちらつきを抑え、安定した表示を実現。
+・Canvasで波形を描画し、音の変化を視覚的にも確認できるようにした。`,
+      longDescription_en: `Captures live audio from the microphone via the Web Audio API and estimates the fundamental frequency using an autocorrelation algorithm, converting it to a MIDI note number to display the detected musical note in real time.
+
+Implementation notes
+- A silence threshold filters out low-amplitude input before pitch detection runs, reducing false positives.
+- Pitch results are smoothed by taking the most frequent note across a short rolling history, avoiding flicker from single-frame noise.
+- The waveform is drawn live on a canvas, so the audio signal itself is also visible alongside the detected note.`,
+      image: "",
+      link: "",
+      github: "",
+      noteUrl: "",
+      category: "Web Development",
+      techStack: ["React", "TypeScript", "Web Audio API", "Canvas API"]
+    },
+    {
+      id: "zoho-cliq-pod-bot",
+      title: "Team Mention Assistant (Zoho Cliq Bot)",
+      description: "インターンシップで開発した、社内コミュニケーションツール「Zoho Cliq」向けのAI Bot。メンションの自動ルーティングやSLAベースのエスカレーション、ドキュメントQ&A（RAG）などでチームの進行管理を自動化します。",
+      description_en: "An AI bot for the internal communication tool Zoho Cliq, built during an internship. Automates mention routing, SLA-based escalation, and document Q&A (RAG) to support team workflow management.",
+      longDescription: `インターンシップで開発・運用した、Zoho Cliq（社内チャットツール）向けのFlask製Webhook Botです。チャンネル内のメッセージをリアルタイムで解析し、以下のような業務を自動化しています。
+
+・役職や部署の情報をもとにした適切な担当者への自動メンション
+・一定時間返信がない場合のSLAエスカレーション（優先度ごとにタイムアウトを設定）
+・チャットで交わされたタスクや約束事の自動抽出・追跡（完了検知を含む）
+・過去に共有されたドキュメントをもとにした質問応答（RAG / ChromaDB）
+・会話の停滞・混乱の検知、必要な担当者不在の検知
+・日次・週次サマリーの自動投稿
+
+主な技術
+Google Gemini APIによる自然言語処理、ChromaDBによるベクトル検索、APSchedulerによる定期実行、MongoDBでのデータ管理を組み合わせ、AWS EKS上にDocker・GitLab CI/CDでデプロイして運用しました。
+※社内システムのため、詳細な仕様やソースコードの一部は非公開としています。`,
+      longDescription_en: `A Flask-based webhook bot for Zoho Cliq (an internal team chat tool), developed and operated during an internship. It processes every message posted in a channel in real time to automate:
+
+- Mention routing to the right teammate based on job title and department
+- SLA-based escalation when a message goes unanswered, with different timeouts by priority tier
+- Automatic detection and tracking of action items and commitments mentioned in chat
+- Document Q&A over previously shared files using retrieval-augmented generation (RAG / ChromaDB)
+- Detection of stalled or confused conversations and missing-stakeholder situations
+- Scheduled daily and weekly summary posts
+
+Tech highlights
+Combines the Google Gemini API for natural language understanding, ChromaDB for vector search, APScheduler for recurring jobs, and MongoDB for data storage, deployed to AWS EKS via Docker and GitLab CI/CD.
+Note: as this was built for an internal company system, some implementation details and the source code are kept private.`,
+      image: "",
+      link: "",
+      github: "",
+      noteUrl: "",
+      category: "Backend / AI Automation",
+      techStack: ["Python", "Flask", "Google Gemini API", "ChromaDB", "MongoDB", "APScheduler", "AWS EKS", "Docker"]
+    },
+    {
       id: "portfolio-site",
       title: "Portfolio Site",
       description: "自分自身のスキルを紹介するレスポンシブなポートフォリオ。(作成途中)",
